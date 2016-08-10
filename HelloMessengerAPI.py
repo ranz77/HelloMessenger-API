@@ -1,11 +1,13 @@
 from flask import Flask
 
+import Auth
+
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+@app.route('/auth/<authcode>')
+def hello_world(authcode):
+    return Auth.verifyAuthCode(authcode);
 
 
 if __name__ == '__main__':
