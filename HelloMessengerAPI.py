@@ -4,6 +4,9 @@ import Auth
 
 app = Flask(__name__)
 
+@app.route('/test')
+def test():
+    return "Hello, world"
 
 @app.route('/auth/<authcode>')
 def hello_world(authcode):
