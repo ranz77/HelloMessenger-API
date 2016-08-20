@@ -32,7 +32,5 @@ def hello_world(authcode):
 def reset():
     return GeneralDatabase.reset_database(getDatabaseCursor())
 
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-    app.run()
