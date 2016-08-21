@@ -1,9 +1,11 @@
 #!/usr/bin/python
-from django.core.serializers import python
-from flask import Flask
-import Auth, DatabaseTest, MySQLdb
+from flask import Flask, request
+import DatabaseTest
 import GeneralDatabase
+import MySQLdb
 import Secure
+
+from api import Auth, Users, Conversations, Messages, Matching
 
 app = Flask(__name__)
 db = MySQLdb.connect(Secure.host, Secure.user, Secure.password, Secure.database, autocommit=1)
@@ -41,44 +43,68 @@ def auth_access_token(authcode):
 
 @app.route('/user', methods=['POST', 'PUT', 'DELETE'])
 def users():
-    # TODO
-    return
+    if request.method == 'POST':
+        return Users.create_new_user()
+    elif request.method == 'PUT':
+        return Users.update_user()
+    elif request.method == 'DELETE':
+        return Users.delete_user()
+    else:
+        return "404 not found"
 
 
 @app.route('/user/<id>', methods=['GET'])
 def user(id):
-    # TODO
-    return
+    if request.method == 'GET':
+        return Users.get_user_for_id(id)
+    else:
+        return "404 not found"
 
 
 @app.route('/conversations/list', methods=['GET'])
 def conversations_list():
-    # TODO
-    return
+    if request.method == 'GET':
+        return Conversations.list_conversations()
+    else:
+        return "404 not found"
 
 
 @app.route('/conversations/request', methods=['POST', 'GET', 'DELETE'])
 def conversations_request():
-    # TODO
-    return
+    if request.method == 'POST':
+        return Matching.new_request()
+    elif request.method == 'GET':
+        return Matching.get_update_on_request()
+    elif request.method == 'DELETE':
+        return Matching.end_request()
+    else:
+        return "404 not found"
 
 
-@app.route('/conversations/mesages/<id>', methods=['POST', 'GET'])
+@app.route('/conversations/messages/<id>', methods=['POST', 'GET'])
 def conversations_messages(id):
-    # TODO
-    return
+    if request.method == 'POST':
+        return Messages.post_new_conversation_message(id)
+    elif request.method == 'GET':
+        return Messages.get_conversation_messages(id)
+    else:
+        return '404 not found'
 
 
 @app.route('/conversations/leave/<id>', methods=['DELETE'])
 def conversations_messages(id):
-    # TODO
-    return
+    if request.method == 'DELETE':
+        return Conversations.leave_conversation(id)
+    else:
+        return '404 not found'
 
 
 @app.route('/conversations/friend_request/<id>', methods=['POST'])
 def conversations_friend_request(id):
-    # TODO
-    return
+    if request.method == 'POST':
+        return Conversations.send_friend_request(id)
+    else:
+        return '404 not found'
 
 
 if __name__ == '__main__':
