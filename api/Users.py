@@ -1,18 +1,18 @@
-def create_new_user():
+def create_new_user(data, cursor):
     # TODO
     return
 
 
-def update_user():
+def update_user(data, cursor):
     # TODO
     return
 
 
-def delete_user():
+def delete_user(data, cursor):
     # TODO
     return
 
 
-def get_user_for_id(id):
+def get_user_for_id(id, data, cursor):
     # TODO
     return

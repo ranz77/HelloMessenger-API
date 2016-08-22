@@ -4,6 +4,7 @@ import DatabaseTest
 import GeneralDatabase
 import MySQLdb
 import Secure
+import json
 
 from api import Auth, Users, Conversations, Messages, Matching
 
@@ -38,71 +39,81 @@ def reset():
 
 @app.route('/auth/accessToken/<authcode>', methods=['GET'])
 def auth_access_token(authcode):
-    return Auth.verify_auth_code(authcode, get_database_cursor());
+    if request.method == 'GET':
+        return Auth.verify_auth_code(authcode, get_database_cursor())
+    else:
+        return '404 not found'
 
 
 @app.route('/user', methods=['POST', 'PUT', 'DELETE'])
 def users():
+    data = request.get_json()
     if request.method == 'POST':
-        return Users.create_new_user()
+        return Users.create_new_user(data, get_database_cursor())
     elif request.method == 'PUT':
-        return Users.update_user()
+        return Users.update_user(data, get_database_cursor())
     elif request.method == 'DELETE':
-        return Users.delete_user()
+        return Users.delete_user(data, get_database_cursor())
     else:
         return "404 not found"
 
 
 @app.route('/user/<id>', methods=['GET'])
 def user(id):
+    data = request.get_json()
     if request.method == 'GET':
-        return Users.get_user_for_id(id)
+        return Users.get_user_for_id(id, data, get_database_cursor())
     else:
         return "404 not found"
 
 
 @app.route('/conversations/list', methods=['GET'])
 def conversations_list():
+    data = request.get_json()
     if request.method == 'GET':
-        return Conversations.list_conversations()
+        return Conversations.list_conversations(data, get_database_cursor())
     else:
         return "404 not found"
 
 
 @app.route('/conversations/request', methods=['POST', 'GET', 'DELETE'])
 def conversations_request():
+    data = request.get_json()
     if request.method == 'POST':
-        return Matching.new_request()
+        return Matching.new_request(data, get_database_cursor())
     elif request.method == 'GET':
-        return Matching.get_update_on_request()
+        return Matching.get_update_on_request(data, get_database_cursor())
     elif request.method == 'DELETE':
-        return Matching.end_request()
+        return Matching.end_request(data, get_database_cursor())
     else:
         return "404 not found"
 
 
 @app.route('/conversations/messages/<id>', methods=['POST', 'GET'])
 def conversations_messages(id):
+    data = request.get_json()
     if request.method == 'POST':
-        return Messages.post_new_conversation_message(id)
+        return Messages.post_new_conversation_message(id, data, get_database_cursor())
     elif request.method == 'GET':
-        return Messages.get_conversation_messages(id)
+        return Messages.get_conversation_messages(id, data, get_database_cursor())
     else:
         return '404 not found'
 
 
 @app.route('/conversations/leave/<id>', methods=['DELETE'])
 def conversations_messages(id):
+    data = request.get_json()
     if request.method == 'DELETE':
-        return Conversations.leave_conversation(id)
+        return Conversations.leave_conversation(id, data, get_database_cursor())
     else:
         return '404 not found'
 
 
 @app.route('/conversations/friend_request/<id>', methods=['POST'])
 def conversations_friend_request(id):
+    data = request.get_json()
     if request.method == 'POST':
-        return Conversations.send_friend_request(id)
+        return Conversations.send_friend_request(id, data, get_database_cursor())
     else:
         return '404 not found'
 

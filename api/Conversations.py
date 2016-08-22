@@ -1,13 +1,13 @@
-def list_conversations():
+def list_conversations(data, cursor):
     # TODO
     return
 
 
-def leave_conversation(id):
+def leave_conversation(id, data, cursor):
     # TODO
     return
 
 
-def send_friend_request(id):
+def send_friend_request(id, data, cursor):
     # TODO
     return
