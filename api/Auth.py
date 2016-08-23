@@ -1,4 +1,5 @@
-import json, requests
+import json
+import requests
 
 
 def verify_auth_code(authcode, cursor):
@@ -17,4 +18,4 @@ def verify_auth_code(authcode, cursor):
         'accountExists': cursor.fetchone() is None,
         'accessToken': access_token
     }
-    return response
+    return json.dumps(response)
