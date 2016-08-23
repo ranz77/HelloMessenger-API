@@ -13,6 +13,11 @@ def delete_user(data, cursor):
     return
 
 
+def get_my_user(data, cursor):
+    # TODO
+    return
+
+
 def get_user_for_id(id, data, cursor):
     # TODO
     return

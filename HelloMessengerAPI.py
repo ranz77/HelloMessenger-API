@@ -4,7 +4,6 @@ import DatabaseTest
 import GeneralDatabase
 import MySQLdb
 import Secure
-import json
 
 from api import Auth, Users, Conversations, Messages, Matching
 
@@ -37,7 +36,7 @@ def reset():
     return GeneralDatabase.reset_database(get_database_cursor())
 
 
-@app.route('/auth/accessToken/<authcode>', methods=['GET'])
+@app.route('/auth/access_token/<authcode>', methods=['GET'])
 def auth_access_token(authcode):
     if request.method == 'GET':
         return Auth.verify_auth_code(authcode, get_database_cursor())
@@ -45,11 +44,13 @@ def auth_access_token(authcode):
         return '404 not found'
 
 
-@app.route('/user', methods=['POST', 'PUT', 'DELETE'])
+@app.route('/user', methods=['POST', 'GET', 'PUT', 'DELETE'])
 def users():
     data = request.get_json()
     if request.method == 'POST':
         return Users.create_new_user(data, get_database_cursor())
+    elif request.method == 'GET':
+        return Users.get_my_user(data, get_database_cursor())
     elif request.method == 'PUT':
         return Users.update_user(data, get_database_cursor())
     elif request.method == 'DELETE':
@@ -89,8 +90,17 @@ def conversations_request():
         return "404 not found"
 
 
-@app.route('/conversations/messages/<id>', methods=['POST', 'GET'])
-def conversations_messages(id):
+@app.route('/conversations/top_messages/<id>', methods=['GET'])
+def conversations_messages_top(id):
+    data = request.get_json()
+    if request.method == 'GET':
+        return Messages.get_conversation_messages(id, data, get_database_cursor())
+    else:
+        return '404 not found'
+
+
+@app.route('/conversations/bottom_messages/<id>', methods=['POST', 'GET'])
+def conversations_messages_bottem(id):
     data = request.get_json()
     if request.method == 'POST':
         return Messages.post_new_conversation_message(id, data, get_database_cursor())
