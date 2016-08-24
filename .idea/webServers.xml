@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4f778e63-d0b9-4eed-b083-666bfe8d0411" name="Sorver01" url="http://159.203.183.38">
+        <fileTransfer host="159.203.183.38" port="21" rootFolder="/HelloMessenger" password="dfffdfc4dfd9dfcfdfcbdfdedf93df92" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
