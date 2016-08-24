@@ -63,7 +63,7 @@ def users():
 def user(id):
     data = request.get_json()
     if request.method == 'GET':
-        return Users.get_user_for_id(id, data, get_database_cursor())
+        return Users.get_user_json_for_id(id, get_database_cursor())
     else:
         return "404 not found"
 
