@@ -5,7 +5,7 @@ import json
 
 
 def has_not_been_matched(user_id_one, user_id_two, cursor):
-    sql_querry = "SELECT first_user_id from PREVIOUS_MATCHES WHERE first_user_id = '{1}' AND user_id_two = '{2}'"\
+    sql_querry = "SELECT first_user_id from PREVIOUS_MATCHES WHERE first_user_id = '{0}' AND user_id_two = '{1}'"\
         .format(user_id_one, user_id_two)
     cursor.execute(sql_querry)
     return cursor.fetchone() is None
@@ -22,6 +22,13 @@ def finish_request(request, user_id, cursor):
     sql_querry = "INSERT INTO PREVIOUS_MATCHES values ('{0}', '{1}')".format(user_id_two, user_id_one)
     cursor.execute(sql_querry)
 
+    # Make new conversations
+    sql_querry = "INSERT INTO CONVERSATIONS values ('{0}', '{1}')".format(user_id_one, user_id_two)
+    cursor.execute(sql_querry)
+    sql_querry = "INSERT INTO CONVERSATIONS values ('{0}', '{1}')".format(user_id_two, user_id_one)
+    cursor.execute(sql_querry)
+
+    # Complete request data
     request["status"] = "matched"
     request["matchedUserId"] = user_id
     request["matchedUserInfo"] = Users.get_user_for_id(user_id, cursor)
