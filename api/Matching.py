@@ -23,9 +23,10 @@ def finish_request(request, user_id, cursor):
     cursor.execute(sql_querry)
 
     # Make new conversations
-    sql_querry = "INSERT INTO CONVERSATIONS values ('{0}', '{1}')".format(user_id_one, user_id_two)
+    conversation_id = user_id_one + "---" + user_id_two
+    sql_querry = "INSERT INTO CONVERSATIONS values ('{0}', '{1}', '{2}', 0)".format(conversation_id, user_id_one, user_id_two)
     cursor.execute(sql_querry)
-    sql_querry = "INSERT INTO CONVERSATIONS values ('{0}', '{1}')".format(user_id_two, user_id_one)
+    sql_querry = "INSERT INTO CONVERSATIONS values ('{0}', '{1}', '{2}', 0)".format(conversation_id, user_id_two, user_id_one)
     cursor.execute(sql_querry)
 
     # Complete request data

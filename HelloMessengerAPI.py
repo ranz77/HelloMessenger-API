@@ -94,7 +94,7 @@ def conversations_request():
 def conversations_messages_top(id):
     data = request.get_json()
     if request.method == 'GET':
-        return Messages.get_conversation_messages(id, data, get_database_cursor())
+        return Messages.get_conversation_messages_at_top(id, data, get_database_cursor())
     else:
         return '404 not found'
 
@@ -105,7 +105,7 @@ def conversations_messages_bottem(id):
     if request.method == 'POST':
         return Messages.post_new_conversation_message(id, data, get_database_cursor())
     elif request.method == 'GET':
-        return Messages.get_conversation_messages(id, data, get_database_cursor())
+        return Messages.get_conversation_messages_at_bottom(id, data, get_database_cursor())
     else:
         return '404 not found'
 

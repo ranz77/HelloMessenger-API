@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dec47e22-1b44-4f53-ae4f-989f87a648ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HelloMessengerAPI.py" afterPath="$PROJECT_DIR$/HelloMessengerAPI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Conversations.py" afterPath="$PROJECT_DIR$/api/Conversations.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Matching.py" afterPath="$PROJECT_DIR$/api/Matching.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Messages.py" afterPath="$PROJECT_DIR$/api/Messages.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Utils.py" afterPath="$PROJECT_DIR$/api/Utils.py" />
     </list>
     <ignored path="HelloMessengerAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,9 +41,41 @@
             <file leaf-file-name="Messages.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/api/Messages.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="120">
-                    <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                  <state relative-caret-position="150">
+                    <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
                     <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Conversations.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/api/Conversations.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="970">
+                    <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+                    <folding>
+                      <element signature="e#0#21#0" expanded="true" />
+                      <marker date="1472048319000" expanded="true" signature="181:260" ph="SELECT secon... CONVERSATIONS" />
+                      <marker date="1472048319000" expanded="true" signature="181:261" ph="SELECT secon... CONVERSATIONS" />
+                      <marker date="1472048319000" expanded="true" signature="421:484" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="421:490" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="421:506" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="421:508" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="421:509" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="421:528" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="421:529" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="1153:1200" ph="DELETE FROM " />
+                      <marker date="1472048319000" expanded="true" signature="1153:1201" ph="DELETE FROM " />
+                      <marker date="1472048319000" expanded="true" signature="1153:1237" ph="DELETE FROM " />
+                      <marker date="1472048319000" expanded="true" signature="1153:1238" ph="DELETE FROM " />
+                      <marker date="1472048319000" expanded="true" signature="1467:1516" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="1467:1517" ph="SELECT perm MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="1467:1550" ph="SELECT perm MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="1467:1551" ph="SELECT perm MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="1467:1562" ph="SELECT perm MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="1642:1699" ph="SELECT TOP 1... MESSAGES" />
+                      <marker date="1472048319000" expanded="true" signature="2176:2256" ph="INSERT INTO MESSAGES... " />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -47,18 +83,18 @@
             <file leaf-file-name="Matching.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/api/Matching.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="525">
-                    <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+                  <state relative-caret-position="1000">
+                    <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
                     <folding>
                       <element signature="e#0#21#0" expanded="true" />
-                      <marker date="1472001829000" expanded="true" signature="169:233" ph="SELECT first... PREVIOUS_MATCHES" />
-                      <marker date="1472001829000" expanded="true" signature="169:235" ph="SELECT first... PREVIOUS_MATCHES" />
-                      <marker date="1472001829000" expanded="true" signature="169:263" ph="SELECT first... PREVIOUS_MATCHES" />
-                      <marker date="1472001829000" expanded="true" signature="175:176" ph="INSERT INTO PREVIOUS_MATCHES... " />
-                      <marker date="1472001829000" expanded="true" signature="581:631" ph="INSERT INTO PREVIOUS_MATCHES... " />
-                      <marker date="1472001829000" expanded="true" signature="715:765" ph="INSERT INTO PREVIOUS_MATCHES... " />
-                      <marker date="1472001829000" expanded="true" signature="879:926" ph="INSERT INTO CONVERSATIONS... " />
-                      <marker date="1472001829000" expanded="true" signature="1010:1057" ph="INSERT INTO CONVERSATIONS... " />
+                      <marker date="1472047698000" expanded="true" signature="169:233" ph="SELECT first... PREVIOUS_MATCHES" />
+                      <marker date="1472047698000" expanded="true" signature="169:235" ph="SELECT first... PREVIOUS_MATCHES" />
+                      <marker date="1472047698000" expanded="true" signature="169:263" ph="SELECT first... PREVIOUS_MATCHES" />
+                      <marker date="1472047698000" expanded="true" signature="175:176" ph="INSERT INTO PREVIOUS_MATCHES... " />
+                      <marker date="1472047698000" expanded="true" signature="581:631" ph="INSERT INTO PREVIOUS_MATCHES... " />
+                      <marker date="1472047698000" expanded="true" signature="715:765" ph="INSERT INTO PREVIOUS_MATCHES... " />
+                      <marker date="1472047698000" expanded="true" signature="935:992" ph="INSERT INTO CONVERSATIONS... " />
+                      <marker date="1472047698000" expanded="true" signature="1093:1150" ph="INSERT INTO CONVERSATIONS... " />
                     </folding>
                   </state>
                 </provider>
@@ -89,16 +125,6 @@
                       <marker date="1471998576000" expanded="true" signature="1388:1429" ph="DELETE FROM " />
                       <marker date="1471998576000" expanded="true" signature="1935:2050" ph="SELECT name,... User" />
                     </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="Conversations.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/api/Conversations.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="90">
-                    <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -138,12 +164,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelloMessengerAPI.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HelloMessengerAPI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HelloMessengerAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="38">
+              <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+              <folding>
+                <element signature="e#18#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,8 +191,8 @@
       <file leaf-file-name="Utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/Utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -172,11 +200,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DatabaseTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
               <folding>
                 <marker date="1471726408000" expanded="true" signature="47:66" ph="insert into auth... " />
                 <marker date="1471726408000" expanded="true" signature="146:187" ph="insert into auth... " />
@@ -211,14 +239,14 @@
         <option value="$PROJECT_DIR$/Messages.py" />
         <option value="$PROJECT_DIR$/Matching.py" />
         <option value="$PROJECT_DIR$/api/__init__.py" />
-        <option value="$PROJECT_DIR$/api/Messages.py" />
-        <option value="$PROJECT_DIR$/api/Conversations.py" />
-        <option value="$PROJECT_DIR$/HelloMessengerAPI.py" />
         <option value="$PROJECT_DIR$/DatabaseTest.py" />
         <option value="$PROJECT_DIR$/api/Auth.py" />
-        <option value="$PROJECT_DIR$/api/Utils.py" />
         <option value="$PROJECT_DIR$/api/Users.py" />
+        <option value="$PROJECT_DIR$/api/Messages.py" />
+        <option value="$PROJECT_DIR$/HelloMessengerAPI.py" />
+        <option value="$PROJECT_DIR$/api/Utils.py" />
         <option value="$PROJECT_DIR$/api/Matching.py" />
+        <option value="$PROJECT_DIR$/api/Conversations.py" />
       </list>
     </option>
   </component>
@@ -600,7 +628,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -608,7 +638,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -628,7 +660,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -648,7 +682,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -668,7 +704,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -688,7 +726,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -708,7 +748,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -728,7 +770,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -748,7 +792,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,24 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/Utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HelloMessengerAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GeneralDatabase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -798,64 +826,6 @@
           <folding>
             <marker date="1471711883000" expanded="true" signature="61:77" ph="delete from " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/Auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1471979473000" expanded="true" signature="492:530" ph="SELECT userI... User" />
-            <marker date="1471979473000" expanded="true" signature="492:531" ph="SELECT userI... User" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DatabaseTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1471726408000" expanded="true" signature="47:66" ph="insert into auth... " />
-            <marker date="1471726408000" expanded="true" signature="146:187" ph="insert into auth... " />
-            <marker date="1471726408000" expanded="true" signature="266:308" ph="select id fr... auth" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/Matching.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1472001829000" expanded="true" signature="169:233" ph="SELECT first... PREVIOUS_MATCHES" />
-            <marker date="1472001829000" expanded="true" signature="169:235" ph="SELECT first... PREVIOUS_MATCHES" />
-            <marker date="1472001829000" expanded="true" signature="169:263" ph="SELECT first... PREVIOUS_MATCHES" />
-            <marker date="1472001829000" expanded="true" signature="175:176" ph="INSERT INTO PREVIOUS_MATCHES... " />
-            <marker date="1472001829000" expanded="true" signature="581:631" ph="INSERT INTO PREVIOUS_MATCHES... " />
-            <marker date="1472001829000" expanded="true" signature="715:765" ph="INSERT INTO PREVIOUS_MATCHES... " />
-            <marker date="1472001829000" expanded="true" signature="879:926" ph="INSERT INTO CONVERSATIONS... " />
-            <marker date="1472001829000" expanded="true" signature="1010:1057" ph="INSERT INTO CONVERSATIONS... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/Messages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,11 +856,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/Auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1471979473000" expanded="true" signature="492:530" ph="SELECT userI... User" />
+            <marker date="1471979473000" expanded="true" signature="492:531" ph="SELECT userI... User" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DatabaseTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <marker date="1471726408000" expanded="true" signature="47:66" ph="insert into auth... " />
+            <marker date="1471726408000" expanded="true" signature="146:187" ph="insert into auth... " />
+            <marker date="1471726408000" expanded="true" signature="266:308" ph="select id fr... auth" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HelloMessengerAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="94" column="6" selection-start-line="94" selection-start-column="6" selection-end-line="94" selection-end-column="6" />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Matching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1472047698000" expanded="true" signature="169:233" ph="SELECT first... PREVIOUS_MATCHES" />
+            <marker date="1472047698000" expanded="true" signature="169:235" ph="SELECT first... PREVIOUS_MATCHES" />
+            <marker date="1472047698000" expanded="true" signature="169:263" ph="SELECT first... PREVIOUS_MATCHES" />
+            <marker date="1472047698000" expanded="true" signature="175:176" ph="INSERT INTO PREVIOUS_MATCHES... " />
+            <marker date="1472047698000" expanded="true" signature="581:631" ph="INSERT INTO PREVIOUS_MATCHES... " />
+            <marker date="1472047698000" expanded="true" signature="715:765" ph="INSERT INTO PREVIOUS_MATCHES... " />
+            <marker date="1472047698000" expanded="true" signature="935:992" ph="INSERT INTO CONVERSATIONS... " />
+            <marker date="1472047698000" expanded="true" signature="1093:1150" ph="INSERT INTO CONVERSATIONS... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Messages.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/Conversations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="970">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1472048319000" expanded="true" signature="181:260" ph="SELECT secon... CONVERSATIONS" />
+            <marker date="1472048319000" expanded="true" signature="181:261" ph="SELECT secon... CONVERSATIONS" />
+            <marker date="1472048319000" expanded="true" signature="421:484" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="421:490" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="421:506" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="421:508" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="421:509" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="421:528" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="421:529" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="1153:1200" ph="DELETE FROM " />
+            <marker date="1472048319000" expanded="true" signature="1153:1201" ph="DELETE FROM " />
+            <marker date="1472048319000" expanded="true" signature="1153:1237" ph="DELETE FROM " />
+            <marker date="1472048319000" expanded="true" signature="1153:1238" ph="DELETE FROM " />
+            <marker date="1472048319000" expanded="true" signature="1467:1516" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="1467:1517" ph="SELECT perm MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="1467:1550" ph="SELECT perm MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="1467:1551" ph="SELECT perm MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="1467:1562" ph="SELECT perm MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="1642:1699" ph="SELECT TOP 1... MESSAGES" />
+            <marker date="1472048319000" expanded="true" signature="2176:2256" ph="INSERT INTO MESSAGES... " />
+          </folding>
         </state>
       </provider>
     </entry>

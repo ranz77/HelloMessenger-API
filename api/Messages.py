@@ -1,4 +1,9 @@
-def get_conversation_messages(id, data, cursor):
+def get_conversation_messages_at_bottom(id, data, cursor):
+    # TODO
+    return
+
+
+def get_conversation_messages_at_top(id, data, cursor):
     # TODO
     return
 
