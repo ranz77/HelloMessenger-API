@@ -3,8 +3,8 @@ from api import Utils
 import json
 
 
-def list_conversations(data, cursor):
-    user_id = Utils.get_id_for_access_token(data['accessToken'])
+def list_conversations(access_token, cursor):
+    user_id = Utils.get_id_for_access_token(access_token)
     cursor.execute("SELECT second_user_id, conversation_id FROM CONVERSATIONS WHERE first_user_id = " + user_id)
     array = []
     list_of_conversations = list(cursor)
@@ -21,7 +21,7 @@ def list_conversations(data, cursor):
                 'newMessage': seen_by_reciever,
                 'conversationId': conversation_id
             })
-    return json.dump(array)
+    return json.dumps({'conversations':array})
 
 
 def leave_conversation(conversation_id, data, cursor):

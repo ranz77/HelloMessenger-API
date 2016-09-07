@@ -70,22 +70,25 @@ def user(id):
 
 @app.route('/conversations/list', methods=['GET'])
 def conversations_list():
-    data = request.get_json()
+    token = request.args.get('access_token', '')
+    print 'token: {}'.format(token)
     if request.method == 'GET':
-        return Conversations.list_conversations(data, get_database_cursor())
+        return Conversations.list_conversations(token, get_database_cursor())
     else:
         return "404 not found"
 
 
 @app.route('/conversations/request', methods=['POST', 'GET', 'DELETE'])
 def conversations_request():
-    data = request.get_json()
     if request.method == 'POST':
+        data = request.get_json()
         return Matching.new_request(data, get_database_cursor())
     elif request.method == 'GET':
-        return Matching.get_update_on_request(data, get_database_cursor())
+        token = request.args.get('access_token', '')
+        return Matching.get_update_on_request(token, get_database_cursor())
     elif request.method == 'DELETE':
-        return Matching.end_request(data, get_database_cursor())
+        token = request.args.get('access_token', '')
+        return Matching.end_request(token, get_database_cursor())
     else:
         return "404 not found"
 
