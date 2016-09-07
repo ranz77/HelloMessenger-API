@@ -9,9 +9,10 @@ def create_new_user(data, cursor):
     user_id = Utils.get_id_for_access_token(data['accessToken'])
 
     # Add user to SQL database
-    sql_querry = "INSERT INTO USER values ('{0}', {1}, {2}, {3}, '{4}', '{5}', '{6}')"\
+    sql_querry = "INSERT INTO USER values ('{0}', '{1}', {2}, {3}, {4}, '{5}', '{6}', '{7}')"\
         .format(user_id, user_data['name'], user_data['birthDay'], user_data['birthMonth'],
                 user_data['birthYear'], user_data['location'], user_data['picture'], user_data['bio'])
+    print sql_querry
     cursor.execute(sql_querry)
 
     # Return json

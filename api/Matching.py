@@ -60,8 +60,8 @@ def new_request(data, cursor):
     })
 
 
-def get_update_on_request(data, cursor):
-    user_id = Utils.get_id_for_access_token(data['accessToken'])
+def get_update_on_request(token, cursor):
+    user_id = Utils.get_id_for_access_token(token)
     for request in pending_requests:
         if user_id is request['id']:
             request_copy = request.copy()
@@ -72,8 +72,8 @@ def get_update_on_request(data, cursor):
     })
 
 
-def end_request(data, cursor):
-    user_id = Utils.get_id_for_access_token(data['accessToken'])
+def end_request(token, cursor):
+    user_id = Utils.get_id_for_access_token(token)
     for request in pending_requests:
         if user_id is request['id']:
             pending_requests.remove(request)
